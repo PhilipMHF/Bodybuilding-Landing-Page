@@ -1,0 +1,145 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: AsifaBold;
+    src: url(/fonts/Far_AsifaBold.ttf);
+}
+
+@font-face {
+    font-family: Nazanin;
+    src: url(/fonts/Far_Nazanin.ttf);
+}
+
+:root {
+    --bg-color1: #78d301;
+    --bg-color2: #110d0d;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    font-family: Nazanin, serif;
+    font-size: 1rem;
+    color: white;
+    height: 100vh;
+    background-image: url(/images/bodybuilder-transparent.png), linear-gradient(to top left, 
+                                                                                            var(--bg-color1) 0%, 
+                                                                                            var(--bg-color1) 30%, 
+                                                                                            var(--bg-color2) 30%);
+                                                                
+    background-size: 90%, 100%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: center bottom, center;                       
+}
+
+#navbar {
+    background-color: var(--bg-color2);
+    color: white;
+    padding: 0.5rem 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#navbar ul {
+    font-size: 1.7rem;
+    list-style: none;
+    display: grid;
+    grid-template-areas: 
+                        'log-in fees about-us';
+    justify-items:center;
+    align-items: center;
+}
+
+#navbar ul li:nth-child(1) {
+    grid: log-in;
+}
+
+#navbar ul li:nth-child(2) {
+    grid-area: fees;
+}
+
+#navbar ul li:nth-child(3) {
+    grid-area: about-us;
+}
+
+#speed-gym {
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#speed-gym h1 {
+    font-family: AsifaBold, serif;
+    font-size: 2.5rem;
+    line-height: 3rem;
+}
+
+#speed-gym p {
+    max-width: 100%;
+    font-size: 1.5rem;
+}
+
+#hr-spacer1 {
+    height: 2px;
+    width: 90%;
+    background-color: white;
+    margin: 1rem auto 0.5rem;
+}
+
+#hr-spacer2 {
+    height: 2px;
+    width: 70%;
+    background-color: white;
+    margin: 0 auto 0.5rem;
+}
+
+#hr-spacer3 {
+    height: 2px;
+    width: 50%;
+    background-color: white;
+    margin: 0 auto 1rem;
+}
+
+header form {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#userinfo {
+    display: flex;
+    padding: 1rem 0;
+    justify-content: space-between;
+}
+
+#userinfo input {
+    padding: 0.5rem;
+    border-radius: 50px;
+    border: none;
+    text-align: center;
+}
+
+#submit__btn {
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.5em;
+    border-radius: 50px;
+    border: 1px solid var(--bg-color2);
+    background-color: var(--bg-color1);
+}
